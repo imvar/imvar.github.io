@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обратная связь | Я — студент ВШЭ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Я — студент ВШЭ</h1>
+    <p class="tagline">Форма обратной связи</p>
+  </header>
+
+  <nav class="main-nav" aria-label="Основная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="feedback.html">Обратная связь</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content form-page">
+    <article>
+      <header>
+        <h2>Обратная связь</h2>
+      </header>
+      <p>
+        Заполните форму ниже. Поля, отмеченные <strong>*</strong>, обязательны для заполнения.
+      </p>
+
+      <form action="#" method="get" id="feedback-form">
+        <div class="form-group">
+          <label for="name">Имя <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Ваше имя" maxlength="100">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@mail.ru">
+        </div>
+
+        <div class="form-group">
+          <label for="faculty">Факультет / направление</label>
+          <select id="faculty" name="faculty">
+            <option value="">— Выберите —</option>
+            <option value="miem">МИЭМ</option>
+            <option value="fkn">ФКН</option>
+            <option value="economy">Экономический факультет</option>
+            <option value="law">Юридический факультет</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="course">Курс</label>
+          <input type="number" id="course" name="course" min="1" max="6" value="1" placeholder="1">
+          <p class="hint">От 1 до 6</p>
+        </div>
+
+        <div class="form-group">
+          <label for="birthdate">Дата рождения</label>
+          <input type="date" id="birthdate" name="birthdate">
+        </div>
+
+        <div class="form-group">
+          <label>Пол</label>
+          <p>
+            <label><input type="radio" name="gender" value="male"> Мужской</label><br>
+            <label><input type="radio" name="gender" value="female"> Женский</label><br>
+            <label><input type="radio" name="gender" value="other"> Другое</label>
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Тема обращения</label>
+          <input type="text" id="topic" name="topic" list="topics" placeholder="Например: учёба, мероприятия">
+          <datalist id="topics">
+            <option value="Учёба">
+            <option value="Мероприятия">
+            <option value="Стипендия">
+            <option value="Другое">
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Сообщение <span aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required placeholder="Опишите ваш вопрос или предложение..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="subscribe" value="yes">
+            Подписаться на рассылку новостей
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Отправить</button>
+          <button type="reset">Очистить</button>
+        </div>
+      </form>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p><small>© Домашнее задание по веб-технологиям. ВШЭ.</small></p>
+  </footer>
+</body>
+</html>

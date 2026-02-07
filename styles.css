@@ -1,0 +1,176 @@
+/* Базовые стили для homework_1 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: #333;
+}
+
+.site-header {
+  border-bottom: 2px solid #b31b1b;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  color: #b31b1b;
+  font-size: 1.75rem;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #b31b1b;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  margin-bottom: 2rem;
+}
+
+.main-content article {
+  margin-bottom: 1.5rem;
+}
+
+.main-content h2 {
+  color: #b31b1b;
+  margin-top: 0;
+}
+
+.main-content h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.main-content p {
+  margin: 0.5rem 0;
+}
+
+.highlight {
+  background: #fff3cd;
+  padding: 0 2px;
+}
+
+.info-box {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+}
+
+.info-box h3 {
+  margin-top: 0;
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.visual-section {
+  margin-top: 1.5rem;
+}
+
+.visual-section figure {
+  margin: 1rem 0;
+}
+
+.visual-section img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visual-section figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Страница формы */
+.form-page main {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  padding: 0.5rem 1.5rem;
+  background: #b31b1b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.form-actions button:hover {
+  background: #8b1515;
+}
+
+.form-group .hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
