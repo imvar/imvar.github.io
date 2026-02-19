@@ -1,33 +1,43 @@
-/* Базовые стили для homework_1 */
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
   line-height: 1.6;
+  color: #333;
   max-width: 900px;
   margin: 0 auto;
   padding: 1rem;
-  color: #333;
+  background-color: #fafafa;
+}
+
+body > header {
+  font-weight: 700;
 }
 
 .site-header {
   border-bottom: 2px solid #b31b1b;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
+  background: linear-gradient(to bottom, #fff 0%, #f5f5f5 100%);
+  padding: 1rem 1rem 0.5rem;
 }
 
 .site-header h1 {
   margin: 0;
-  color: #b31b1b;
+  color: #b31b1b !important;
   font-size: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.tagline {
+.site-header .tagline {
   margin: 0.25rem 0 0;
   font-size: 0.95rem;
   color: #555;
+  font-style: italic;
 }
 
 .main-nav ul {
@@ -35,43 +45,79 @@ body {
   padding: 0;
   margin: 0 0 1.5rem;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.main-nav li {
+  flex: 0 0 auto;
 }
 
 .main-nav a {
   color: #b31b1b;
   text-decoration: none;
+  font-weight: 600;
 }
 
 .main-nav a:hover {
   text-decoration: underline;
+  color: #8b1515;
+}
+
+.main-nav a[href="index.html"]:first-of-type {
+  font-size: 1.05rem;
 }
 
 .main-content {
   margin-bottom: 2rem;
+  min-height: 200px;
+  position: relative;
 }
 
 .main-content article {
   margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
 
-.main-content h2 {
+.main-content article > header h2 {
   color: #b31b1b;
   margin-top: 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
 }
 
 .main-content h3 {
   font-size: 1.1rem;
   margin: 1rem 0 0.5rem;
+  color: #222;
+}
+
+.main-content section + section {
+  margin-top: 1.25rem;
 }
 
 .main-content p {
   margin: 0.5rem 0;
+  text-align: left;
+}
+
+.main-content p::first-letter {
+  font-size: 1.4em;
+  color: #b31b1b;
+  font-weight: bold;
 }
 
 .highlight {
   background: #fff3cd;
-  padding: 0 2px;
+  padding: 0 4px;
+  font-weight: 600;
 }
 
 .info-box {
@@ -80,6 +126,8 @@ body {
   border-radius: 4px;
   padding: 1rem;
   margin: 1.5rem 0;
+  width: 100%;
+  max-width: 320px;
 }
 
 .info-box h3 {
@@ -89,26 +137,38 @@ body {
 .info-box ul {
   margin: 0;
   padding-left: 1.25rem;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+.info-box li:nth-child(odd) {
+  color: #555;
 }
 
 .visual-section {
   margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
 .visual-section figure {
   margin: 1rem 0;
+  position: relative;
 }
 
 .visual-section img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 200px;
 }
 
 .visual-section figcaption {
   font-size: 0.9rem;
   color: #666;
   margin-top: 0.5rem;
+  font-style: italic;
 }
 
 .site-footer {
@@ -116,21 +176,40 @@ body {
   padding-top: 1rem;
   font-size: 0.9rem;
   color: #666;
+  position: sticky;
+  bottom: 0;
+  background-color: #fafafa !important;
 }
 
-/* Страница формы */
-.form-page main {
-  max-width: 500px;
+.site-footer small {
+  font-size: 0.85rem;
+}
+
+#page-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-page .main-content {
+  max-width: 560px;
+}
+
+.form-page main article {
+  max-width: 100%;
 }
 
 .form-group {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
-.form-group label {
+.form-group > label {
   display: block;
   margin-bottom: 0.25rem;
   font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 .form-group input[type="text"],
@@ -144,15 +223,33 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   font: inherit;
+  font-size: 1rem;
+  background-color: #fff;
 }
 
-.form-group textarea {
-  min-height: 100px;
-  resize: vertical;
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: 2px solid #b31b1b;
+  outline-offset: 0;
+}
+
+.form-group input[required] {
+  border-left: 3px solid #b31b1b;
+}
+
+.form-group .hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
 }
 
 .form-actions {
   margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
 }
 
 .form-actions button {
@@ -163,14 +260,76 @@ body {
   border-radius: 4px;
   font: inherit;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .form-actions button:hover {
   background: #8b1515;
 }
 
-.form-group .hint {
-  font-size: 0.85rem;
-  color: #666;
-  margin-top: 0.25rem;
+.form-actions button[type="reset"] {
+  background: #6c757d;
+}
+
+.form-actions button[type="reset"]:hover {
+  background: #5a6268;
+}
+
+.main-nav a[target="_blank"]::after {
+  content: " \2197";
+  font-size: 0.75em;
+}
+
+#feedback-form {
+  width: 100%;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+cite {
+  font-style: italic;
+  color: #555;
+}
+
+@media (min-width: 600px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-box {
+    max-width: 360px;
+  }
+
+  body {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
+  .main-nav ul {
+    justify-content: flex-start;
+  }
+
+  .form-page .main-content {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 599px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .visual-section img {
+    width: 160px;
+  }
 }

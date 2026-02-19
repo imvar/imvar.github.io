@@ -5,9 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Я — студент ВШЭ | Главная</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .tagline { letter-spacing: 0.03em; }
+    .visual-section h3 { margin-bottom: 0.75rem; }
+    footer p { margin: 0; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" style="position: relative;">
     <h1>Я — студент ВШЭ</h1>
     <p class="tagline">Высшая школа экономики</p>
   </header>
@@ -19,7 +24,7 @@
     </ul>
   </nav>
 
-  <main class="main-content">
+  <main class="main-content" id="page-main">
     <article>
       <header>
         <h2>О моём обучении в ВШЭ</h2>
@@ -29,7 +34,7 @@
         <p>
           <strong>Высшая школа экономики</strong> — один из ведущих университетов России.
           Я учусь здесь, потому что ценю <em>качество образования</em>, современные методы
-          и связь с практикой. ВШЭ даёт не только знания, но и <span class="highlight">навыки для карьеры</span>.
+          и связь с практикой. ВШЭ даёт не только знания, но и <span class="highlight" style="border-radius: 2px;">навыки для карьеры</span>.
         </p>
       </section>
       <section>
@@ -59,7 +64,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" style="text-align: center;">
     <p><small>© Домашнее задание по веб-программированию. ВШЭ.</small></p>
   </footer>
 </body>
