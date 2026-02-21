@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Я — студент ВШЭ | Главная</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
   <link rel="stylesheet" href="styles.css">
   <style>
     .tagline { letter-spacing: 0.03em; }
@@ -62,10 +63,27 @@
         <figcaption>Логотип Высшей школы экономики</figcaption>
       </figure>
     </section>
+
+    <section class="map-section">
+      <h3>ВШЭ на карте</h3>
+      <div id="map"></div>
+    </section>
+
+    <section class="chat-section">
+      <h3>Чат с автором</h3>
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input-wrap">
+        <input type="text" id="chat-input" class="chat-input" placeholder="Сообщение..." maxlength="500" autocomplete="off">
+        <button type="button" id="chat-send" class="chat-btn chat-btn-send">Отправить</button>
+        <button type="button" id="chat-voice" class="chat-btn chat-btn-voice" title="Голосовое сообщение">🎤</button>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" style="text-align: center;">
     <p><small>© Домашнее задание по веб-программированию. ВШЭ.</small></p>
   </footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="app.js"></script>
 </body>
 </html>
