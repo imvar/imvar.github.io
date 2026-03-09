@@ -19,8 +19,9 @@
 
   <nav class="main-nav" aria-label="Основная навигация">
     <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="feedback.html">Обратная связь</a></li>
+      <li><a href="/">Главная</a></li>
+      <li><a href="/feedback.html">Обратная связь</a></li>
+      <li><a href="/data">Данные</a></li>
     </ul>
   </nav>
 
@@ -33,7 +34,7 @@
         Заполните форму ниже. Поля, отмеченные <strong style="color: #b31b1b;">*</strong>, обязательны для заполнения.
       </p>
 
-      <form action="#" method="get" id="feedback-form">
+      <form action="/submit" method="post" id="feedback-form">
         <div class="form-group">
           <label for="name">Имя <span aria-hidden="true">*</span></label>
           <input type="text" id="name" name="name" required placeholder="Ваше имя" maxlength="100">
