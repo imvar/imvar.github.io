@@ -24,12 +24,12 @@
     if (typeof L === "undefined") return;
     var mapEl = document.getElementById("map");
     if (!mapEl) return;
-    var center = [55.753215, 37.622504];
-    var map = L.map("map").setView(center, 15);
+    var center = [55.76135, 37.6335];
+    var map = L.map("map").setView(center, 16);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
     }).addTo(map);
-    L.marker(center).addTo(map).bindPopup("ВШЭ, Москва");
+    L.marker(center).addTo(map).bindPopup("НИУ ВШЭ, ул. Мясницкая, 20");
   }
 
   function pickReply(text) {
